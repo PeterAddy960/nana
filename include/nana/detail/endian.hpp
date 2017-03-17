@@ -11,7 +11,7 @@ namespace nana
 			bool LittleEndian;
 		public:
 			Endian();
-			template<typename T> static Reverse(T &Var)
+			template<typename T> static void Reverse(T &Var)
 			{
 				unsigned char* Bytes = (unsigned char*)&Var;
 				for(size_t i = 0,j = sizeof(T) - 1; i < j; i++,j--)
